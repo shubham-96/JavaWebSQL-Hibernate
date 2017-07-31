@@ -1,0 +1,67 @@
+<!DOCTYPE web-app PUBLIC
+ "-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN"
+ "http://java.sun.com/dtd/web-app_2_3.dtd" >
+
+<web-app>
+  <display-name>Archetype Created Web Application</display-name>
+  <servlet>
+  	<servlet-name>LoginServlet</servlet-name>
+  	<display-name>LoginServlet</display-name>
+  	<description></description>
+  	<servlet-class>com.ideas.LoginServlet</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>NameServlet</servlet-name>
+  	<display-name>NameServlet</display-name>
+  	<description></description>
+  	<servlet-class>com.ideas.NameServlet</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>WelcomeServlet</servlet-name>
+  	<display-name>WelcomeServlet</display-name>
+  	<description></description>
+  	<servlet-class>com.ideas.WelcomeServlet</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>EmployeeServlet</servlet-name>
+  	<display-name>EmployeeServlet</display-name>
+  	<description></description>
+  	<servlet-class>com.ideas.EmployeeServlet</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>SaveEmployeeServlet</servlet-name>
+  	<display-name>SaveEmployeeServlet</display-name>
+  	<description></description>
+  	<servlet-class>com.ideas.SaveEmployeeServlet</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>GetAllEmployeesServlet</servlet-name>
+  	<display-name>GetAllEmployeesServlet</display-name>
+  	<description></description>
+  	<servlet-class>com.ideas.GetAllEmployeesServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>LoginServlet</servlet-name>
+  	<url-pattern>/LoginServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>NameServlet</servlet-name>
+  	<url-pattern>/NameServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>WelcomeServlet</servlet-name>
+  	<url-pattern>/WelcomeServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>EmployeeServlet</servlet-name>
+  	<url-pattern>/EmployeeServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>SaveEmployeeServlet</servlet-name>
+  	<url-pattern>/SaveEmployeeServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>GetAllEmployeesServlet</servlet-name>
+  	<url-pattern>/GetAllEmployeesServlet</url-pattern>
+  </servlet-mapping>
+</web-app>

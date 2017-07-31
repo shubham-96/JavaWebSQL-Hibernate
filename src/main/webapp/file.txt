@@ -1,0 +1,17 @@
+{
+	"empArray":[{
+	    "empID": "1234",
+	    "empName": "Shubham Burewar",
+	    "contactNo": "9511618418"
+	},
+	{
+		"empID": "1235",
+		"empName": "Surendra Chouhan",
+		"contactNo": "7276432150"
+	},
+	{
+		"empID": "1236",
+		"empName": "Utkarsh Vaish",
+		"contactNo": "7747026541"
+	}]
+}
