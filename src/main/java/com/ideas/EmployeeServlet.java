@@ -1,6 +1,8 @@
 package com.ideas;
 
 import java.io.IOException;
+
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -40,6 +42,8 @@ public class EmployeeServlet extends HttpServlet {
 		
 		Employe employe = new Employe();
 		employe.setName(request.getParameter("username"));
+		if()
+		
 		employe.setCompanyEmployeeID(Integer.parseInt(request.getParameter("compEmpID")));
 		
 		employe.setDepartment(request.getParameter("department"));
@@ -51,6 +55,7 @@ public class EmployeeServlet extends HttpServlet {
 		employe.setContactNumber(Long.parseLong(request.getParameter("contact")));
 		session.save(employe);
 		session.getTransaction().commit();
-			
+		RequestDispatcher requestDispatcher = request.getRequestDispatcher("index.jsp");
+		requestDispatcher.include(request, response);
 	}
 }

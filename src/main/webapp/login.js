@@ -5,7 +5,6 @@ function loadDoc() {
 	xhttp.onreadystatechange = function() {
     if (this.readyState == 4 && this.status == 200) {
       employee = JSON.parse(this.responseText);
-      debugger;
       getEmployee();
     }
   };
@@ -48,7 +47,7 @@ function getEmployee() {
 	}
 }
 
-function searchByName() {
+/*function searchByName() {
 	  var input, filter, table, tr, td, i;
 	  input = document.getElementById("myInput");
 	  filter = input.value.toUpperCase();
@@ -65,3 +64,4 @@ function searchByName() {
 	    }
 	  }
 	}
+*/

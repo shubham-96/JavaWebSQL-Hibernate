@@ -20,7 +20,7 @@
 		</div>
 	</div>
 	<div class="w3-container" style="width:86%">
-	<input class="w3-input w3-border w3-padding" type="text" placeholder="Search by name" id="myInput" onkeyup="searchByName()">
+	<!-- <input class="w3-input w3-border w3-padding" type="text" placeholder="Search by name" id="myInput" onkeyup="searchByName()"> -->
 	<table id="myTable" class="w3-table w3-striped w3-hoverable"><br />
 		<tr class="w3-pale-blue">
 			<th>EmployeeID</th>
