@@ -12,16 +12,33 @@
 </head>
 <body>
 <div align="center" class="w3-pale-blue">
-	<div align="left" class="w3-container w3-blue">
+
+    <div align="left" class="w3-container w3-blue">
 		<h2>Registered Employees</h2>
 		<div class="w3-bar">
 		<a class="w3-button w3-blue w3-hover-white" href="index.jsp">Home</a>
 		<a class="w3-button w3-blue w3-disabled">Edit</a>
 		</div>
 	</div>
+    
 	<div class="w3-container" style="width:86%">
-	<!-- <input class="w3-input w3-border w3-padding" type="text" placeholder="Search by name" id="myInput" onkeyup="searchByName()"> -->
-	<table id="myTable" class="w3-table w3-striped w3-hoverable"><br />
+    <div class="w3-row">
+        <div align="left" class="w3-col w3-white w3-text-grey" style="width:15%">
+            <p style="margin-bottom:0px; margin-top:8px; padding-bottom:8px; padding-left:10px;">Search by:</p></div>
+        <div class="w3-col" style="width:15%">
+            <select id="filterkey" class="w3-select w3-text-grey w3-border-0" >
+							<option disabled selected> -- select filter -- </option>
+							<option id="Name">Name</option>
+							<option id="CompanyEmployeeID">CompanyEmployeeID</option>
+							<option id="Self">Self</option>
+							<option id="Department">Department</option>
+			</select>
+        </div>
+        <div align="left" class="w3-rest">
+            <input class="w3-input w3-animate-input w3-border-0 w3-padding" style="width:25%" type="text" placeholder="Search by name" id="myInput" onkeyup="search()">
+        </div>
+    </div>
+    <table id="myTable" class="w3-table w3-striped w3-hoverable"><br />
 		<tr class="w3-pale-blue">
 			<th>EmployeeID</th>
 			<th>Name</th>

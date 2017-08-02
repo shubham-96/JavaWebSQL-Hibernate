@@ -42,7 +42,6 @@ public class EmployeeServlet extends HttpServlet {
 		
 		Employe employe = new Employe();
 		employe.setName(request.getParameter("username"));
-		if()
 		
 		employe.setCompanyEmployeeID(Integer.parseInt(request.getParameter("compEmpID")));
 		

@@ -47,21 +47,37 @@ function getEmployee() {
 	}
 }
 
-/*function searchByName() {
-	  var input, filter, table, tr, td, i;
+function search() {
+	  var input, filter, table, tr, td, i, j;
+	  var filterBy = document.getElementById("filterkey");
+	  filterkey = filterBy.options[filterBy.selectedIndex].text;
+	  switch (filterkey) {
+		  case "Name":
+			  i=1;
+			  break;
+		  case "CompanyEmployeeID":
+			  i=2;
+			  break;
+		  case "Self":
+			  i=4;
+			  break;
+		  case "Department":
+			  i=6;
+			  break;
+	  }
+
 	  input = document.getElementById("myInput");
 	  filter = input.value.toUpperCase();
 	  table = document.getElementById("myTable");
 	  tr = table.getElementsByTagName("tr");
-	  for (i = 0; i < tr.length; i++) {
-	    td = tr[i].getElementsByTagName("td")[1];
+	  for (j = 0; j < tr.length; j++) {
+	    td = tr[j].getElementsByTagName("td")[i];
 	    if (td) {
 	      if (td.innerHTML.toUpperCase().indexOf(filter) > -1) {
-	        tr[i].style.display = "";
+	        tr[j].style.display = "";
 	      } else {
-	        tr[i].style.display = "none";
+	        tr[j].style.display = "none";
 	      }
 	    }
 	  }
 	}
-*/
