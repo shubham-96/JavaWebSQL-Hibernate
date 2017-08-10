@@ -10,7 +10,7 @@
 <script src="login.js"></script>
 <title>Register table</title>
 </head>
-<body>
+<body class="w3-pale-blue">
 <div align="center" class="w3-pale-blue">
 
     <div align="left" class="w3-container w3-blue">
@@ -20,8 +20,8 @@
 		<a class="w3-button w3-blue w3-disabled">Edit</a>
 		</div>
 	</div>
-    
-	<div class="w3-container" style="width:86%">
+
+	<div class="w3-container w3-hover-shadow" style="width:86%">
     <div class="w3-row">
         <div align="left" class="w3-col w3-white w3-text-grey" style="width:15%">
             <p style="margin-bottom:0px; margin-top:8px; padding-bottom:8px; padding-left:10px;">Search by:</p></div>
@@ -35,10 +35,10 @@
 			</select>
         </div>
         <div align="left" class="w3-rest">
-            <input class="w3-input w3-animate-input w3-border-0 w3-padding" style="width:25%" type="text" placeholder="Search by name" id="myInput" onkeyup="search()">
+            <input class="w3-input w3-border-0 w3-padding" type="text" placeholder="Search by name" id="myInput" onkeyup="search()">
         </div>
     </div>
-    <table id="myTable" class="w3-table w3-striped w3-hoverable"><br />
+    <table id="myTable" class="w3-table w3-striped w3-hoverable w3-section">
 		<tr class="w3-pale-blue">
 			<th>EmployeeID</th>
 			<th>Name</th>
