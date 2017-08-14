@@ -28,21 +28,21 @@
         <div class="w3-col" style="width:15%">
             <select id="filterkey" class="w3-select w3-text-grey w3-border-0" >
 							<option disabled selected> -- select filter -- </option>
-							<option id="Name">Name</option>
 							<option id="CompanyEmployeeID">CompanyEmployeeID</option>
+							<option id="Name">Name</option>
 							<option id="Self">Self</option>
 							<option id="Department">Department</option>
 			</select>
         </div>
         <div align="left" class="w3-rest">
-            <input class="w3-input w3-border-0 w3-padding" type="text" placeholder="Search by name" id="myInput" onkeyup="search()">
+            <input class="w3-input w3-border-0 w3-padding" type="text" placeholder="Search" id="myInput" onkeyup="search()">
         </div>
     </div>
     <table id="myTable" class="w3-table w3-striped w3-hoverable w3-section">
 		<tr class="w3-pale-blue">
 			<th>EmployeeID</th>
-			<th>Name</th>
 			<th>CompanyEmployeeID</th>
+			<th>Name</th>
 			<th>ContactNo</th>
 			<th>Self</th>
 			<th>Gender</th>
@@ -52,8 +52,8 @@
 
 			for (Employe employe : empList){%>
 				<tr><td><a href=""><%= employe.getEmployeeId() %></a></td>
-				<td><%= employe.getName() %></td>
-				<td><%= employe.getCompanyEmployeeID() %></td>
+                <td><%= employe.getCompanyEmployeeID() %></td>
+                <td><%= employe.getName() %></td>
 				<td><%= employe.getContactNumber() %></td>
 				<td><%= employe.getSelf() %></td>
 				<td><%= employe.getGender() %></td>

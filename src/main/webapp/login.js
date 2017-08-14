@@ -2,7 +2,6 @@ var employee = null;
 
 function loadDoc() {
 	var xhttp = new XMLHttpRequest();
-	debugger;
 	xhttp.onreadystatechange = function() {
     if (this.readyState == 4 && this.status == 200) {
       employee = JSON.parse(this.responseText);
@@ -10,11 +9,9 @@ function loadDoc() {
     }
   };
   xhttp.open("GET", "EmployeeServlet?empID=" + document.getElementById("EmployeeID").value + "&t=" + Math.random(), true);
-  debugger;
   xhttp.send();
 }
 function getEmployee() {
-	debugger;
 	if(employee.employeeId == document.getElementById("EmployeeID").value) {
 		document.getElementById("username").value = employee.name;
 		document.getElementById("CompanyEmployeeID").value = employee.companyEmployeeID;
