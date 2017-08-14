@@ -22,6 +22,10 @@
 			<form action="EmployeeServlet" method="post"><br />
 			<table id="showlist">
 				<tr>
+					<th><p>Company Employee ID : </p></th>
+					<td colspan="3"><input id="CompanyEmployeeID" class="w3-input w3-border-0" type="text" name="comEmpID"></td>
+				</tr>
+				<tr>
 					<th><p>Employee ID : </p></th>
 					<td colspan="2"><input id="EmployeeID" class="w3-input w3-border-0" type="text" name="empID"></td>
 					<td id="fetchbutton" style="width: 162px; padding-left: 15px;"><input id="fetchEmployee" class="w3-button w3-white w3-hover-blue" type="button" onclick="loadDoc()" value="Fetch Details"></td>
@@ -29,10 +33,6 @@
 				<tr>
 					<th><p>Name : </p></th>
 					<td colspan="3"><input id="username" class="w3-input w3-border-0" type="text" name="username"></td>
-				</tr>
-				<tr>
-					<th><p>Company Employee ID : </p></th>
-					<td colspan="3"><input id="CompanyEmployeeID" class="w3-input w3-border-0" type="text" name="comEmpID"></td>
 				</tr>
 				<tr>
 					<th><p>Department: </p></th>

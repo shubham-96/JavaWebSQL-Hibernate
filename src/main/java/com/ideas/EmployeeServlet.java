@@ -9,6 +9,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import org.hibernate.Criteria;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.criterion.Restrictions;
@@ -27,11 +28,12 @@ public class EmployeeServlet extends HttpServlet {
 		SessionFactory sessionFactory =  HibernateUtils.getSessionFactory();
 		Session session = sessionFactory.openSession();
 		session.beginTransaction();
-		//Integer searchKey = Integer.parseInt(request.getParameter("comEmpID"));
-		//Employe employe = (Employe) session.createCriteria(Employe.class).add(Restrictions.eq("companyEmployeeID", searchKey)).uniqueResult();
+		Integer searchKey = Integer.parseInt(request.getParameter("comEmpID"));
+		Criteria criteria = session.createCriteria(Employe.class);
+		Employe employe = (Employe) criteria.add(Restrictions.eq("companyEmployeeID", searchKey)).uniqueResult();
 		
-		Integer s = Integer.parseInt(request.getParameter("empID"));
-		Employe employe = session.find(Employe.class, s);
+		//Integer s = Integer.parseInt(request.getParameter("empID"));
+		//Employe employe = session.find(Employe.class, s);
 		session.getTransaction().commit();
 		
 		Gson gson = new Gson();
@@ -48,13 +50,13 @@ public class EmployeeServlet extends HttpServlet {
 		Employe employe = new Employe();
 		employe.setName(request.getParameter("username"));
 		
-		employe.setCompanyEmployeeID(Integer.parseInt(request.getParameter("compEmpID")));
+		employe.setCompanyEmployeeID(Integer.parseInt(request.getParameter("comEmpID")));
 		
 		employe.setDepartment(request.getParameter("department"));
-		if(request.getParameter("self")=="on")
+		if(request.getParameter("self") != "null")
 			employe.setSelf(true);
-		else if(request.getParameter("self")=="null")
-			employe.setSelf(false);
+		/*else if(request.getParameter("self")=="on")
+			employe.setSelf(true);*/
 		employe.setGender(request.getParameter("gender"));
 		employe.setContactNumber(Long.parseLong(request.getParameter("contact")));
 		session.save(employe);

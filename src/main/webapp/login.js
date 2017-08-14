@@ -2,19 +2,22 @@ var employee = null;
 
 function loadDoc() {
 	var xhttp = new XMLHttpRequest();
+	debugger;
 	xhttp.onreadystatechange = function() {
     if (this.readyState == 4 && this.status == 200) {
       employee = JSON.parse(this.responseText);
       getEmployee();
     }
   };
-  xhttp.open("GET", "EmployeeServlet?empID=" + document.getElementById("EmployeeID").value + "&t=" + Math.random(), true);
+  xhttp.open("GET", "EmployeeServlet?comEmpID=" + document.getElementById("CompanyEmployeeID").value + "&t=" + Math.random(), true);
   xhttp.send();
+  debugger;
 }
 function getEmployee() {
-	if(employee.employeeId == document.getElementById("EmployeeID").value) {
+	debugger;
+	if(employee.companyEmployeeID == document.getElementById("CompanyEmployeeID").value) {
 		document.getElementById("username").value = employee.name;
-		document.getElementById("CompanyEmployeeID").value = employee.companyEmployeeID;
+		//document.getElementById("CompanyEmployeeID").value = employee.companyEmployeeID;
 
 		if (employee.gender == "MALE")
 			document.getElementById("genderM").checked = true;
