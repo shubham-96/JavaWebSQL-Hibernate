@@ -88,7 +88,7 @@
 				</tr>
 				<tr>
 					<th><p>Additional Information: <br />(Optional) </p></th>
-					<td colspan="3"><textarea class="w3-border-0" name="message" rows="5" cols="40"></textarea></td>
+					<td colspan="3"><textarea class="w3-border-0" style="resize:none" name="message" rows="5" cols="40"></textarea></td>
 				</tr>
 				<tr>
 					<th></th>

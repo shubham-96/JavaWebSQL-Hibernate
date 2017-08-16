@@ -27,8 +27,6 @@ public class EmployeeServlet extends HttpServlet {
 		SessionFactory sessionFactory =  HibernateUtils.getSessionFactory();
 		Session session = sessionFactory.openSession();
 		session.beginTransaction();
-		//Integer searchKey = Integer.parseInt(request.getParameter("comEmpID"));
-		//Employe employe = (Employe) session.createCriteria(Employe.class).add(Restrictions.eq("companyEmployeeID", searchKey)).uniqueResult();
 		
 		Integer s = Integer.parseInt(request.getParameter("empID"));
 		Employe employe = session.find(Employe.class, s);
@@ -48,12 +46,13 @@ public class EmployeeServlet extends HttpServlet {
 		Employe employe = new Employe();
 		employe.setName(request.getParameter("username"));
 		
-		employe.setCompanyEmployeeID(Integer.parseInt(request.getParameter("compEmpID")));
+		employe.setCompanyEmployeeID(Integer.parseInt(request.getParameter("comEmpID")));
 		
 		employe.setDepartment(request.getParameter("department"));
-		if(request.getParameter("self")=="on")
+		System.out.println(request.getParameter("self"));
+		if(request.getParameter("self") != null)
 			employe.setSelf(true);
-		else if(request.getParameter("self")=="null")
+		else
 			employe.setSelf(false);
 		employe.setGender(request.getParameter("gender"));
 		employe.setContactNumber(Long.parseLong(request.getParameter("contact")));

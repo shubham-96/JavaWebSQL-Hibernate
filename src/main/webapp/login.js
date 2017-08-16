@@ -5,6 +5,7 @@ function loadDoc() {
 	xhttp.onreadystatechange = function() {
     if (this.readyState == 4 && this.status == 200) {
       employee = JSON.parse(this.responseText);
+      debugger;
       getEmployee();
     }
   };
@@ -12,6 +13,7 @@ function loadDoc() {
   xhttp.send();
 }
 function getEmployee() {
+	debugger;
 	if(employee.employeeId == document.getElementById("EmployeeID").value) {
 		document.getElementById("username").value = employee.name;
 		document.getElementById("CompanyEmployeeID").value = employee.companyEmployeeID;
