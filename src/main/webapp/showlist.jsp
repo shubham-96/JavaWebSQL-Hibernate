@@ -21,7 +21,7 @@
 		</div>
 	</div>
 
-	<div class="w3-container w3-hover-shadow" style="width:86%">
+	<div class="w3-container" style="width:86%">
     <div class="w3-row">
         <div align="left" class="w3-col w3-white w3-text-grey" style="width:15%">
             <p style="margin-bottom:0px; margin-top:8px; padding-bottom:8px; padding-left:10px;">Search by:</p></div>
