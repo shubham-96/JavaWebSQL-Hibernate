@@ -4,20 +4,25 @@ function loadDoc() {
 	var xhttp = new XMLHttpRequest();
 	debugger;
 	xhttp.onreadystatechange = function() {
-    if (this.readyState == 4 && this.status == 200) {
-      employee = JSON.parse(this.responseText);
-      getEmployee();
-    }
-  };
-  xhttp.open("GET", "EmployeeServlet?comEmpID=" + document.getElementById("CompanyEmployeeID").value + "&t=" + Math.random(), true);
-  xhttp.send();
-  debugger;
+		if (this.readyState == 4 && this.status == 200) {
+			employee = JSON.parse(this.responseText);
+			getEmployee();
+		}
+	};
+	xhttp.open("GET", "EmployeeServlet?comEmpID="
+			+ document.getElementById("CompanyEmployeeID").value + "&t="
+			+ Math.random(), true);
+	xhttp.send();
+	debugger;
 }
+
 function getEmployee() {
 	debugger;
-	if(employee.companyEmployeeID == document.getElementById("CompanyEmployeeID").value) {
+	if (employee.companyEmployeeID == document
+			.getElementById("CompanyEmployeeID").value) {
 		document.getElementById("username").value = employee.name;
-		//document.getElementById("CompanyEmployeeID").value = employee.companyEmployeeID;
+		// document.getElementById("CompanyEmployeeID").value =
+		// employee.companyEmployeeID;
 
 		if (employee.gender == "MALE")
 			document.getElementById("genderM").checked = true;
@@ -29,7 +34,7 @@ function getEmployee() {
 		else
 			document.getElementById("self").checked = false;
 
-			switch (employee.department) {
+		switch (employee.department) {
 		case "SD":
 			document.getElementById("SD").selected = true;
 			break;
@@ -51,36 +56,36 @@ function getEmployee() {
 }
 
 function search() {
-	  var input, filter, table, tr, td, i, j;
-	  var filterBy = document.getElementById("filterkey");
-	  filterkey = filterBy.options[filterBy.selectedIndex].text;
-	  switch (filterkey) {
-		  case "Name":
-			  i=1;
-			  break;
-		  case "CompanyEmployeeID":
-			  i=2;
-			  break;
-		  case "Self":
-			  i=4;
-			  break;
-		  case "Department":
-			  i=6;
-			  break;
-	  }
-
-	  input = document.getElementById("myInput");
-	  filter = input.value.toUpperCase();
-	  table = document.getElementById("myTable");
-	  tr = table.getElementsByTagName("tr");
-	  for (j = 0; j < tr.length; j++) {
-	    td = tr[j].getElementsByTagName("td")[i];
-	    if (td) {
-	      if (td.innerHTML.toUpperCase().indexOf(filter) > -1) {
-	        tr[j].style.display = "";
-	      } else {
-	        tr[j].style.display = "none";
-	      }
-	    }
-	  }
+	var input, filter, table, tr, td, i, j;
+	var filterBy = document.getElementById("filterkey");
+	filterkey = filterBy.options[filterBy.selectedIndex].text;
+	switch (filterkey) {
+	case "CompanyEmployeeID":
+		i = 1;
+		break;
+	case "Name":
+		i = 2;
+		break;
+	case "Self":
+		i = 4;
+		break;
+	case "Department":
+		i = 6;
+		break;
 	}
+
+	input = document.getElementById("myInput");
+	filter = input.value.toUpperCase();
+	table = document.getElementById("myTable");
+	tr = table.getElementsByTagName("tr");
+	for (j = 0; j < tr.length; j++) {
+		td = tr[j].getElementsByTagName("td")[i];
+		if (td) {
+			if (td.innerHTML.toUpperCase().indexOf(filter) > -1) {
+				tr[j].style.display = "";
+			} else {
+				tr[j].style.display = "none";
+			}
+		}
+	}
+}
