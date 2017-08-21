@@ -10,8 +10,8 @@
 <script src="login.js"></script>
 <title>Register table</title>
 </head>
-<body class="w3-pale-blue">
-<div align="center" class="w3-pale-blue">
+<body class="w3-light-grey">
+<div align="center" class="w3-light-grey">
 
     <div align="left" class="w3-container w3-blue">
 		<h2>Registered Employees</h2>
