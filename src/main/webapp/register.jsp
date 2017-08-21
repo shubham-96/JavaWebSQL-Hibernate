@@ -87,8 +87,7 @@
 					<td colspan="3"><textarea class=" w3-light-grey w3-border-0" name="message" rows="5" cols="40"></textarea></td>
 				</tr>
 				<tr> -->
-					<th></th>
-					<td colspan="3" align="right"><input class="w3-button w3-white w3-hover-blue" type="submit" name="Submit">
+					<td colspan="4" align="right"><input class="w3-button w3-white w3-hover-blue" type="submit" name="Submit">
 					<button class="w3-button w3-white w3-hover-blue" type="button" onclick="alert('JavaScript is enabled!')">Check JS</button></td>
 				</tr>
 			</table>
