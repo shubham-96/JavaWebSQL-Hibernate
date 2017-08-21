@@ -2,7 +2,6 @@ var employee = null;
 
 function loadDoc() {
 	var xhttp = new XMLHttpRequest();
-	debugger;
 	xhttp.onreadystatechange = function() {
 		if (this.readyState == 4 && this.status == 200) {
 			employee = JSON.parse(this.responseText);
@@ -13,7 +12,6 @@ function loadDoc() {
 			+ document.getElementById("CompanyEmployeeID").value + "&t="
 			+ Math.random(), true);
 	xhttp.send();
-	debugger;
 }
 
 function getEmployee() {

@@ -32,8 +32,6 @@ public class EmployeeServlet extends HttpServlet {
 		Criteria criteria = session.createCriteria(Employe.class);
 		Employe employe = (Employe) criteria.add(Restrictions.eq("companyEmployeeID", searchKey)).uniqueResult();
 		
-		//Integer s = Integer.parseInt(request.getParameter("empID"));
-		//Employe employe = session.find(Employe.class, s);
 		session.getTransaction().commit();
 		
 		Gson gson = new Gson();
@@ -55,8 +53,6 @@ public class EmployeeServlet extends HttpServlet {
 		employe.setDepartment(request.getParameter("department"));
 		if(request.getParameter("self") != "null")
 			employe.setSelf(true);
-		/*else if(request.getParameter("self")=="on")
-			employe.setSelf(true);*/
 		employe.setGender(request.getParameter("gender"));
 		employe.setContactNumber(Long.parseLong(request.getParameter("contact")));
 		session.save(employe);
